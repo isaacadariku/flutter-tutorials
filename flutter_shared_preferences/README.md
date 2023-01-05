@@ -6,7 +6,7 @@ We are using the [shared_preferences](https://pub.dev/packages/shared_preference
 
 The background color of the app is changed based on the color value stored in the shared preferences.
 
-Please refer to the [Medium Article](https://medium.com/@sagarshirbhate_41935/flutter-shared-preferences-2c2e2e2e2e2e) for more details.
+Please refer to the [Medium Article](https://medium.com/@isaacadariku/storing-and-retrieving-data-in-flutter-with-shared-preferences-in-a-maintainable-way-cf75eed6dbe2) for more details.
 
 # Project Structure
 
