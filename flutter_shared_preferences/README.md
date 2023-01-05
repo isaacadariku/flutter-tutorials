@@ -1,16 +1,25 @@
 # flutter_shared_preferences
 
-A new Flutter project.
+A Colorful Counter App using showing the use of Shared Preferences in Flutter.
 
-## Getting Started
+We are using the [shared_preferences](https://pub.dev/packages/shared_preferences) package to store the counter value and color value.
 
-This project is a starting point for a Flutter application.
+The background color of the app is changed based on the color value stored in the shared preferences.
 
-A few resources to get you started if this is your first Flutter project:
+Please refer to the [Medium Article](https://medium.com/@sagarshirbhate_41935/flutter-shared-preferences-2c2e2e2e2e2e) for more details.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Project Structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib
+-- main.dart
+-- services
+---- shared_preferences.dart
+-- app
+---- locator.dart
+
+```
+
+# App Preview
+
+![App Preview](app_preview.gif)
