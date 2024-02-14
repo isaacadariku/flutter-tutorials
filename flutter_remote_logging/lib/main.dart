@@ -14,7 +14,7 @@ Future<void> main() async {
 
   // Use the output listener from the Logger package to write logs to Cloud Logging
   Logger.addOutputListener((event) {
-    if (kReleaseMode) {
+    if (!kReleaseMode) {
       // Only write logs to Cloud Logging in release mode
       googleCloudLoggingService.writeLog(
         level: event.level,
