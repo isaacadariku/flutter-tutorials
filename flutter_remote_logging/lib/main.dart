@@ -1,6 +1,31 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_remote_logging/google_cloud_logging_service.dart';
+import 'package:logger/logger.dart';
 
-void main() {
+final log = Logger();
+final googleCloudLoggingService = GoogleCloudLoggingService();
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Setup Cloud Logging API
+  await googleCloudLoggingService.setupLoggingApi();
+
+  // Use the output listener from the Logger package to write logs to Cloud Logging
+  Logger.addOutputListener((event) {
+    if (kReleaseMode) {
+      // Only write logs to Cloud Logging in release mode
+      googleCloudLoggingService.writeLog(
+        level: event.level,
+        message: event.lines.join(
+            '\n'), // Join the log lines with a new line, so that it is written as a single message
+      );
+      debugPrint('App will log output to Cloud Logging');
+    }
+  });
+
+  log.i('App started');
   runApp(const MyApp());
 }
 
