@@ -83,6 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
+    log.i('User tapped on the button');
+    log.e('Error occurred while fetching data');
+    log.w('Warning: User is offline');
+    log.f('A fatal error occurred' '$_counter');
+    log.d('Debug: User data fetched successfully');
+    log.t('Verbose: User data fetched successfully');
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
